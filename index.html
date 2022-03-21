@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+
+    <section class = "hero">
+        <h2> Weather Dashboard</h2>
+    </section>
+
+
+    <div>
+    <aside class="aside">
+        <div class="search">
+            <div class="row">
+                <h1>Search a city</h1>
+            </div>
+
+            <form id="cityForm">
+                <div class="formEntry">
+                    <input type="text" name = "searchInput" id="searchInput" placeholder="Enter city name" />
+                    <button class="btn" id="searchBtn" type="search">SEARCH <i class="fas fa-search"></i> 
+                    </button>
+                </div>
+                <section class="pastCityList"></section>
+            </form>
+        </div>
+    </aside>
+
+
+    <section class="section">
+        <div class="forecast">
+            <div class="row">
+                <h1 class="cityName">City name</h1>
+                <h1 id = 'currentDay' class = 'date'></h1>
+                <img class="weatherIcon"/>
+            </div>
+
+            <div class="row">
+                <p class="temp">Temperature</p>
+            </div>
+
+            <div class="row">
+                <p class="wind">Wind speed</p>
+            </div>
+
+            <div class="row">
+                <p class="humidity">Relative humidity</p>
+            </div>
+
+            <div class="row">
+                <p class="UV">UV index</p>
+            </div>
+
+            <div class="cardContainer">
+                <h1> 5-Day forecast</h1>
+                <div class="cardRow">
+                    <div class = 'day' id="dayOne"></div>
+                    <div class = 'day' id="dayTwo"></div>
+                    <div class = 'day' id="dayThree"></div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </div>
+
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col">Left Column</div>
+            <div class="col">Center Column</div>
+            <div class="col">Right Column</div>
+        </div>
+    </div> -->
+
+
+
+    <!-- <article class="searchbox">
+        <h2> 
+            Search for a City:
+        </h2>
+    </article>
+
+    <section class="currentcity today"> 
+        <h2>
+            St. Louis 3/10/2022
+        </h2>
+    </section>
+
+    <section class="currentcity fiveday">
+        <h2>
+            5-Day Forecast:
+        </h2>
+    </section> -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

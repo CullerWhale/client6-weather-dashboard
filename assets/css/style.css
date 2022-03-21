@@ -1,0 +1,30 @@
+* {
+  margin: 1%;
+  justify-content: left;
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; */
+}
+
+
+.hero {
+  color: white;
+  background: linear-gradient(to left, blue 50%, #eee 75%);
+  background-color: blue;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-attachment: fixed;
+  background-position: 80%;
+}
+
+.searchbar {
+    display: flex;
+    border: 3px solid black;
+}
+
+.currentcity {
+    display: flex;
+}
