@@ -118,8 +118,17 @@ function getActualWeather(lat, lon) {
     .then(function(res) {
         return res.json() 
     }) .then(function(data) {
-        // console.log(data);
+        console.log(data);
         temp[0].textContent = "Temperature: " + data.current.temp;
+        wind[0].textContent = "Wind: " + data.current.wind_speed + 'MPH';
+        humid[0].textContent = 'Relative Humidity: ' +data.current.humidity + " %";
+        uv[0].textContent = 'UV Index: ' + data.current.uv;
+        // if (data.current.uv != 0) {
+        //     uv[0].textContent = 'UV Index: ' + data.current.uv;
+        // } else {
+        //     uv[0].textContent = 'UV index: 0';
+        // }
+
         // console.log(temp);
         // day1.textContent = data.daily[0].temp;
         // console.log(day1);
@@ -131,11 +140,12 @@ function getActualWeather(lat, lon) {
             var humidEl = document.createElement('div');
             // var iconEl = document.createElement('img');
 
-            tempEl.textContent = data.daily[i].temp.day;
-            windEl.textContent = data.daily[i].weather.wind_speed;
-            dateEl.textContent = data.daily[i].dt;
-            humidEl.textContent = data.daily[i].humidity;
-            // iconEl.setAttribute('src') 
+            dateEl.textContent = "Date: " + data.daily[i].dt;
+            tempEl.textContent = "Temp: " + data.daily[i].temp.day;
+            windEl.textContent = "Wind: " + data.daily[i].weather.wind_speed;
+            humidEl.textContent = "Humidity: " + data.daily[i].humidity;
+            // humidEl.classList = 
+            // iconEl.setAttribute('src') ....
 
             days[i].appendChild(tempEl);
             days[i].appendChild(windEl);
@@ -143,43 +153,7 @@ function getActualWeather(lat, lon) {
             days[i].appendChild(humidEl);
             
         }
-        
-
-
-
     }
-    
     )
 }; 
-
-
-
-
-
-
-
-//// older work
-var long ='';
-var lat ='';
-
-//Get coordinates first 
-var getWeather = function (city) {
-    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=fd22a6487495bb541bdc8d1edcd9feee";
-    
-    // make a request to the url
-    fetch(apiUrl).then(function (response) {
-        console.log(response);
-        response.json().then(function (data) {
-            // lat = (data.coord.lat);
-            // long = (data.coord.lon);
-            console.log(data);
-            // console.log (lat);
-            // console.log (long);
-            // getWeather(lat,long);
-        });
-    });
-};
-
-getWeather('London');
-
 
